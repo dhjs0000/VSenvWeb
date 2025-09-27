@@ -3,11 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VSenv - VS Code 离线实例管理器</title>
-    <meta name="description" content="VSenv 是一个完全免费开源的 VS Code 离线实例管理器，支持创建独立的 VS Code 实例，每个实例拥有独立的用户数据和扩展目录。">
-    <meta name="keywords" content="VS Code, VSenv, 离线管理器, 开源软件, 代码编辑器">
-    <link rel="stylesheet" href="styles.css">
+    <title>VSenv - VS Code 离线实例管理器 | 免费开源的VSCode多实例管理工具</title>
+    <meta name="description" content="VSenv是一个完全免费开源的VS Code离线实例管理器，支持创建多个独立的VSCode实例，每个实例拥有独立的用户数据和扩展目录。支持协议注册、沙箱模式、硬件指纹随机化等高级功能。">
+    <meta name="keywords" content="VS Code, VSenv, VSCode离线管理器, VSCode多实例, VSCode沙箱, VSCode隔离, VSCode协议注册, 开源软件, 代码编辑器, 开发工具, Windows VSCode管理">
+    <meta name="author" content="戴君豪 (dhjs0000)">
+    <meta name="copyright" content="© 2025 戴君豪 (dhjs0000)">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://dhjs0000.github.io/VSenvWeb/">
+    
+    <!-- Language Alternatives -->
+    <link rel="alternate" hreflang="zh-CN" href="https://dhjs0000.github.io/VSenvWeb/">
+    <link rel="alternate" hreflang="en" href="https://dhjs0000.github.io/VSenvWeb/en/">
+    <link rel="alternate" hreflang="x-default" href="https://dhjs0000.github.io/VSenvWeb/">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="VSenv - VS Code 离线实例管理器 | 免费开源的VSCode多实例管理工具">
+    <meta property="og:description" content="VSenv是一个完全免费开源的VS Code离线实例管理器，支持创建多个独立的VSCode实例，每个实例拥有独立的用户数据和扩展目录。支持协议注册、沙箱模式、硬件指纹随机化等高级功能。">
+    <meta property="og:url" content="https://dhjs0000.github.io/VSenvWeb/">
+    <meta property="og:site_name" content="VSenv">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="VSenv - VS Code 离线实例管理器">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VSenv - VS Code 离线实例管理器 | 免费开源的VSCode多实例管理工具">
+    <meta name="twitter:description" content="VSenv是一个完全免费开源的VS Code离线实例管理器，支持创建多个独立的VSCode实例，每个实例拥有独立的用户数据和扩展目录。">
+    <meta name="twitter:site" content="@dhjs0000">
+    <meta name="twitter:creator" content="@dhjs0000">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "VSenv",
+        "alternateName": "VS Code 离线实例管理器",
+        "description": "VSenv是一个完全免费开源的VS Code离线实例管理器，支持创建多个独立的VSCode实例",
+        "url": "https://dhjs0000.github.io/VSenvWeb/",
+        "downloadUrl": "https://github.com/dhjs0000/vsenv/releases",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Windows",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "CNY"
+        },
+        "author": {
+            "@type": "Person",
+            "name": "戴君豪",
+            "alternateName": "dhjs0000",
+            "url": "https://github.com/dhjs0000"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "VSenv Project",
+            "url": "https://github.com/dhjs0000/vsenv"
+        },
+        "license": "https://github.com/dhjs0000/vsenv/blob/main/LICENSE",
+        "codeRepository": "https://github.com/dhjs0000/vsenv",
+        "softwareVersion": "1.0.0",
+        "datePublished": "2025-01-01",
+        "dateModified": "2025-01-01",
+        "keywords": ["VS Code", "VSCode管理器", "离线实例", "开发工具", "开源软件"],
+        "featureList": ["多实例管理", "数据隔离", "协议注册", "沙箱模式", "硬件指纹随机化", "扩展管理"]
+    }
+    </script>
+    
+    <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://github.com">
+    <link rel="preconnect" href="https://bbyc.lanzn.com">
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="https://github.com">
+    <link rel="dns-prefetch" href="https://bbyc.lanzn.com">
 </head>
 <body>
     <header class="header">
@@ -29,9 +111,9 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1 class="hero-title">VS Code 离线实例管理器</h1>
+                    <h1 class="hero-title">VSenv - 专业的VS Code离线实例管理器</h1>
                     <p class="hero-description">
-                        完全免费开源的 VS Code 实例管理解决方案
+                        完全免费开源的VS Code多实例管理解决方案，支持创建独立隔离的开发环境，每个实例拥有独立的用户数据和扩展目录
                     </p>
                     <div class="hero-features">
                         <div class="feature-item">
@@ -83,37 +165,38 @@
 
         <section id="features" class="features">
             <div class="container">
-                <h2 class="section-title">功能特性</h2>
+                <h2 class="section-title">VSenv 核心功能特性</h2>
+                <p class="section-subtitle">专业的VS Code多实例管理解决方案，提供完整的开发环境隔离和管理功能</p>
                 <div class="features-grid">
                     <div class="feature-card">
                         <div class="feature-icon">🗂️</div>
-                        <h3>独立实例管理</h3>
-                        <p>创建多个独立的 VS Code 实例，每个实例拥有完全隔离的用户数据和扩展目录</p>
+                        <h3>独立VSCode实例管理</h3>
+                        <p>创建多个完全独立的VS Code实例，每个实例拥有隔离的用户数据、扩展目录和配置文件，实现真正的多环境开发</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">🔒</div>
-                        <h3>数据隔离保护</h3>
-                        <p>每个实例的配置、扩展和项目数据完全独立，避免相互干扰</p>
+                        <h3>数据隔离保护机制</h3>
+                        <p>每个VSCode实例的配置、扩展和项目数据完全独立，避免不同项目间的相互干扰和配置冲突</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">⚡</div>
-                        <h3>快速启动</h3>
-                        <p>优化的启动流程，支持自定义协议注册，快速访问指定实例</p>
+                        <h3>快速启动与协议支持</h3>
+                        <p>优化的VSCode实例启动流程，支持自定义协议注册，可通过vscode://协议快速访问指定实例</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">🌐</div>
-                        <h3>协议支持</h3>
-                        <p>支持 vscode:// 协议重定向，可直接从浏览器或其他应用打开</p>
+                        <h3>VSCode协议重定向</h3>
+                        <p>支持vscode://协议重定向功能，可直接从浏览器、文件管理器或其他应用快速打开指定VSCode实例</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">🛡️</div>
-                        <h3>隐私保护</h3>
-                        <p>支持硬件指纹随机化，增强隐私保护和实例隔离</p>
+                        <h3>隐私保护与硬件指纹随机化</h3>
+                        <p>支持硬件指纹随机化功能，随机化CPUID、磁盘序列号和MAC地址，增强隐私保护和实例隔离</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">📦</div>
-                        <h3>导入导出</h3>
-                        <p>支持实例的完整导入导出，便于备份和迁移</p>
+                        <h3>实例导入导出与备份</h3>
+                        <p>支持VSCode实例的完整导入导出功能，便于实例备份、迁移和分享，包含所有配置和扩展</p>
                     </div>
                 </div>
             </div>
@@ -200,14 +283,24 @@ vsenv extension import myproject extensions.txt</code></pre>
 
         <section id="download" class="download">
             <div class="container">
-                <h2 class="section-title">下载 VSenv</h2>
+                <h2 class="section-title">免费下载 VSenv VSCode管理器</h2>
+                <p class="section-subtitle">支持Windows平台的VSCode多实例管理工具，完全免费开源，提供GitHub和蓝奏云双下载渠道</p>
                 <div class="download-content">
                     <div class="download-info">
-                        <h3>获取最新版本</h3>
-                        <p>VSenv 完全免费开源，支持 Windows 平台</p>
+                        <h3>获取VSenv最新版本</h3>
+                        <p>VSenv是完全免费开源的VS Code实例管理器，支持Windows 10/11系统，提供64位版本下载</p>
                         <div class="version-info">
                             <span class="version-number">版本: v1.0.0</span>
                             <span class="license">许可证: AGPLv3.0</span>
+                        </div>
+                        <div class="system-requirements">
+                            <h4>系统要求：</h4>
+                            <ul>
+                                <li>Windows 10 或更高版本</li>
+                                <li>64位操作系统</li>
+                                <li>至少100MB可用磁盘空间</li>
+                                <li>管理员权限（用于协议注册功能）</li>
+                            </ul>
                         </div>
                     </div>
                     <div class="download-actions">
@@ -226,12 +319,25 @@ vsenv extension import myproject extensions.txt</code></pre>
 
         <section id="about" class="about">
             <div class="container">
-                <h2 class="section-title">关于 VSenv</h2>
+                <h2 class="section-title">关于VSenv VSCode管理器项目</h2>
+                <p class="section-subtitle">了解VSenv的开发背景、技术特点和开源理念</p>
                 <div class="about-content">
                     <div class="about-text">
-                        <p>VSenv 是一个专为开发者设计的 VS Code 离线实例管理器，旨在提供完全隔离的开发环境。</p>
-                        <p>该项目完全免费开源，采用 AGPLv3.0 许可证，由 dhjs0000 开发和维护。</p>
-                        <p>我们致力于为开发者提供更安全、更灵活的开发环境管理解决方案。</p>
+                        <h3>项目介绍</h3>
+                        <p>VSenv是一个专为开发者设计的VS Code离线实例管理器，旨在为中文开发社区提供完全隔离的开发环境管理解决方案。该项目完全免费开源，采用AGPLv3.0许可证，由开发者戴君豪（dhjs0000）开发和维护。</p>
+                        
+                        <h3>技术特点</h3>
+                        <p>VSenv基于Windows系统底层API开发，支持创建多个完全隔离的VSCode实例，每个实例拥有独立的用户数据、扩展目录和配置文件。通过注册表操作实现协议注册，支持vscode://协议重定向，提供沙箱模式和硬件指纹随机化等高级功能。</p>
+                        
+                        <h3>开源理念</h3>
+                        <p>我们致力于为中文开发社区提供更安全、更灵活的开发环境管理解决方案。VSenv项目坚持开源理念，欢迎社区贡献和反馈，共同完善这款实用的开发工具。</p>
+                        
+                        <h3>开发者信息</h3>
+                        <p><strong>作者：</strong>戴君豪（dhjs0000）<br>
+                        <strong>许可证：</strong>AGPLv3.0<br>
+                        <strong>首次发布：</strong>2025年<br>
+                        <strong>项目类型：</strong>开源软件<br>
+                        <strong>主要功能：</strong>VSCode多实例管理、数据隔离、协议注册</p>
                     </div>
                     <div class="about-links">
                         <a href="https://github.com/dhjs0000/vsenv" target="_blank" class="link-item">

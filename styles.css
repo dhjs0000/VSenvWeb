@@ -252,8 +252,18 @@ section {
     text-align: center;
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     color: var(--text-color);
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Features */
@@ -418,12 +428,46 @@ section {
     opacity: 0.9;
 }
 
-.version-info {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    margin-bottom: 2rem;
-}
+    .version-info {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+    
+    .system-requirements {
+        text-align: left;
+        margin-top: 2rem;
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 0.5rem;
+    }
+    
+    .system-requirements h4 {
+        color: white;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+    }
+    
+    .system-requirements ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .system-requirements li {
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 0.5rem;
+        padding-left: 1.5rem;
+        position: relative;
+    }
+    
+    .system-requirements li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--accent-color);
+        font-weight: bold;
+    }
 
 .version-number, .license {
     background: rgba(255, 255, 255, 0.2);
@@ -451,11 +495,45 @@ section {
     align-items: start;
 }
 
+.about-text h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
 .about-text p {
     font-size: 1.1rem;
     line-height: 1.8;
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
+}
+
+.about-text p strong {
+    color: var(--text-color);
+}
+
+.about-text ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.about-text li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.about-text li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
 }
 
 .about-links {

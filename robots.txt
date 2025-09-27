@@ -1,0 +1,52 @@
+# VSenv Website Robots.txt
+# 允许所有搜索引擎抓取
+
+User-agent: *
+Allow: /
+
+# 禁止抓取敏感目录和文件
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /*.pdf
+Disallow: /*.doc
+Disallow: /*.docx
+
+# 允许抓取sitemap
+Allow: /sitemap.xml
+
+# 设置抓取延迟（避免服务器负载）
+Crawl-delay: 1
+
+# 指定sitemap位置
+Sitemap: https://dhjs0000.github.io/VSenvWeb/sitemap.xml
+
+# 针对特定搜索引擎的额外规则
+
+# Googlebot
+User-agent: Googlebot
+Allow: /
+Disallow: /*?*sort=
+Disallow: /*?*filter=
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+
+# Baiduspider（百度）
+User-agent: Baiduspider
+Allow: /
+
+# 360Spider
+User-agent: 360Spider
+Allow: /
+
+# Sogou Spider
+User-agent: Sogou Spider
+Allow: /
+
+# 禁止抓取重复内容和参数化URL
+Disallow: /*?*sessionid=
+Disallow: /*?*utm_source=
+Disallow: /*?*utm_medium=
+Disallow: /*?*utm_campaign=
