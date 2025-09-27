@@ -348,3 +348,51 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('💡 Try using arrow keys to navigate usage tabs');
     console.log('🏠 Press Home/End for quick navigation');
 });
+
+// Download Modal Functions
+function showDownloadModal() {
+    const modal = document.getElementById('downloadModal');
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+function hideDownloadModal() {
+    const modal = document.getElementById('downloadModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Restore scrolling
+}
+
+// Close modal when clicking outside of it
+window.addEventListener('click', function(event) {
+    const modal = document.getElementById('downloadModal');
+    if (event.target === modal) {
+        hideDownloadModal();
+    }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        hideDownloadModal();
+    }
+});
+
+// Add click tracking for download options
+document.addEventListener('DOMContentLoaded', function() {
+    const githubDownload = document.querySelector('.github-download');
+    const lanzouDownload = document.querySelector('.lanzou-download');
+    
+    if (githubDownload) {
+        githubDownload.addEventListener('click', function() {
+            console.log('GitHub download selected');
+            hideDownloadModal();
+        });
+    }
+    
+    if (lanzouDownload) {
+        lanzouDownload.addEventListener('click', function() {
+            console.log('蓝奏云 download selected');
+            hideDownloadModal();
+        });
+    }
+});

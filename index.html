@@ -211,10 +211,10 @@ vsenv extension import myproject extensions.txt</code></pre>
                         </div>
                     </div>
                     <div class="download-actions">
-                        <a href="https://github.com/dhjs0000/vsenv/releases" class="btn btn-primary" target="_blank">
+                        <button class="btn btn-primary" onclick="showDownloadModal()">
                             <span>📥</span>
                             下载最新版本
-                        </a>
+                        </button>
                         <a href="https://github.com/dhjs0000/vsenv" class="btn btn-secondary" target="_blank">
                             <span>⭐</span>
                             查看源码
@@ -281,6 +281,39 @@ vsenv extension import myproject extensions.txt</code></pre>
             </div>
         </div>
     </footer>
+
+    <!-- 下载模态框 -->
+    <div id="downloadModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>选择下载方式</h3>
+                <span class="close" onclick="hideDownloadModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="download-options">
+                    <a href="https://github.com/dhjs0000/vsenv/releases" class="download-option github-download" target="_blank">
+                        <div class="option-icon">🐙</div>
+                        <div class="option-content">
+                            <h4>GitHub 下载</h4>
+                            <p>从 GitHub Releases 获取最新版本</p>
+                        </div>
+                        <div class="option-arrow">→</div>
+                    </a>
+                    <a href="https://bbyc.lanzn.com/b00rofs4di" class="download-option lanzou-download" target="_blank">
+                        <div class="option-icon">☁️</div>
+                        <div class="option-content">
+                            <h4>蓝奏云盘</h4>
+                            <p>国内用户推荐使用 (密码: 5zyo)</p>
+                        </div>
+                        <div class="option-arrow">→</div>
+                    </a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <p>💡 提示：蓝奏云盘下载速度更快，适合国内用户</p>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
