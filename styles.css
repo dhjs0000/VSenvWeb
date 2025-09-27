@@ -368,6 +368,9 @@ section {
 
 .code-example code {
     color: var(--code-text);
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
 }
 
 .tab-panel p {
@@ -376,10 +379,17 @@ section {
 }
 
 .tab-panel code {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    font-family: 'Courier New', monospace;
+    color: inherit;
+}
+
+.tab-panel p code {
     background: var(--background-color);
     padding: 0.2rem 0.4rem;
     border-radius: 0.3rem;
-    font-family: 'Courier New', monospace;
     color: var(--primary-color);
 }
 
