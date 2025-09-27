@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VSenv - VS Code 离线实例管理器</title>
+    <meta name="description" content="VSenv 是一个完全免费开源的 VS Code 离线实例管理器，支持创建独立的 VS Code 实例，每个实例拥有独立的用户数据和扩展目录。">
+    <meta name="keywords" content="VS Code, VSenv, 离线管理器, 开源软件, 代码编辑器">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>VSenv</h1>
+                <span class="version">v1.0.0</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#features">功能特性</a></li>
+                <li><a href="#usage">使用指南</a></li>
+                <li><a href="#download">下载</a></li>
+                <li><a href="#about">关于</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">VS Code 离线实例管理器</h1>
+                    <p class="hero-description">
+                        完全免费开源的 VS Code 实例管理解决方案
+                    </p>
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">🔧</span>
+                            <span>独立实例管理</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🛡️</span>
+                            <span>数据隔离保护</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🚀</span>
+                            <span>快速部署</span>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <a href="#download" class="btn btn-primary">立即下载</a>
+                        <a href="https://github.com/dhjs0000/vsenv" class="btn btn-secondary" target="_blank">查看源码</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="code-window">
+                        <div class="window-header">
+                            <div class="window-controls">
+                                <span class="control close"></span>
+                                <span class="control minimize"></span>
+                                <span class="control maximize"></span>
+                            </div>
+                            <div class="window-title">VS Code 实例管理</div>
+                        </div>
+                        <div class="code-content">
+                            <div class="code-line">
+                                <span class="prompt">$</span>
+                                <span class="command">vsenv create myproject</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="prompt">$</span>
+                                <span class="command">vsenv start myproject</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="prompt">$</span>
+                                <span class="command">vsenv list</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2 class="section-title">功能特性</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🗂️</div>
+                        <h3>独立实例管理</h3>
+                        <p>创建多个独立的 VS Code 实例，每个实例拥有完全隔离的用户数据和扩展目录</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>数据隔离保护</h3>
+                        <p>每个实例的配置、扩展和项目数据完全独立，避免相互干扰</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>快速启动</h3>
+                        <p>优化的启动流程，支持自定义协议注册，快速访问指定实例</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌐</div>
+                        <h3>协议支持</h3>
+                        <p>支持 vscode:// 协议重定向，可直接从浏览器或其他应用打开</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>隐私保护</h3>
+                        <p>支持硬件指纹随机化，增强隐私保护和实例隔离</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📦</div>
+                        <h3>导入导出</h3>
+                        <p>支持实例的完整导入导出，便于备份和迁移</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="usage" class="usage">
+            <div class="container">
+                <h2 class="section-title">使用指南</h2>
+                <div class="usage-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="create">创建实例</button>
+                        <button class="tab-button" data-tab="start">启动实例</button>
+                        <button class="tab-button" data-tab="manage">管理实例</button>
+                        <button class="tab-button" data-tab="advanced">高级功能</button>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-panel active" id="create">
+                            <h3>创建新的 VS Code 实例</h3>
+                            <div class="code-example">
+                                <pre><code># 创建默认路径的实例
+vsenv create myproject
+
+# 创建指定路径的实例
+vsenv create myproject "D:\Projects\myproject"
+
+# 使用中文界面
+vsenv create myproject --lang cn</code></pre>
+                            </div>
+                            <p>创建实例后，请将 VS Code 离线包解压到实例目录下的 <code>vscode\</code> 文件夹中</p>
+                        </div>
+                        <div class="tab-panel" id="start">
+                            <h3>启动 VS Code 实例</h3>
+                            <div class="code-example">
+                                <pre><code># 基本启动
+vsenv start myproject
+
+# 启用沙箱模式
+vsenv start myproject --sandbox
+
+# 启用硬件指纹随机化
+vsenv start myproject --fake-hw
+
+# 网络隔离启动
+vsenv start myproject --proxy http://127.0.0.1:8080</code></pre>
+                            </div>
+                            <p>支持多种启动模式，包括沙箱、网络隔离和硬件指纹随机化</p>
+                        </div>
+                        <div class="tab-panel" id="manage">
+                            <h3>管理 VS Code 实例</h3>
+                            <div class="code-example">
+                                <pre><code># 列出所有实例
+vsenv list
+
+# 停止实例
+vsenv stop myproject
+
+# 删除实例
+vsenv remove myproject
+
+# 导出实例
+vsenv export myproject backup.vsenv</code></pre>
+                            </div>
+                            <p>完整的实例生命周期管理，支持导入导出功能</p>
+                        </div>
+                        <div class="tab-panel" id="advanced">
+                            <h3>高级功能</h3>
+                            <div class="code-example">
+                                <pre><code># 注册协议处理
+vsenv regist myproject
+
+# 协议守护模式
+vsenv regist-guard myproject
+
+# 安装扩展
+vsenv extension myproject ms-python.python
+
+# 批量安装扩展
+vsenv extension import myproject extensions.txt</code></pre>
+                            </div>
+                            <p>支持协议注册、扩展管理和批量操作等高级功能</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="download" class="download">
+            <div class="container">
+                <h2 class="section-title">下载 VSenv</h2>
+                <div class="download-content">
+                    <div class="download-info">
+                        <h3>获取最新版本</h3>
+                        <p>VSenv 完全免费开源，支持 Windows 平台</p>
+                        <div class="version-info">
+                            <span class="version-number">版本: v1.0.0</span>
+                            <span class="license">许可证: AGPLv3.0</span>
+                        </div>
+                    </div>
+                    <div class="download-actions">
+                        <a href="https://github.com/dhjs0000/vsenv/releases" class="btn btn-primary" target="_blank">
+                            <span>📥</span>
+                            下载最新版本
+                        </a>
+                        <a href="https://github.com/dhjs0000/vsenv" class="btn btn-secondary" target="_blank">
+                            <span>⭐</span>
+                            查看源码
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">关于 VSenv</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>VSenv 是一个专为开发者设计的 VS Code 离线实例管理器，旨在提供完全隔离的开发环境。</p>
+                        <p>该项目完全免费开源，采用 AGPLv3.0 许可证，由 dhjs0000 开发和维护。</p>
+                        <p>我们致力于为开发者提供更安全、更灵活的开发环境管理解决方案。</p>
+                    </div>
+                    <div class="about-links">
+                        <a href="https://github.com/dhjs0000/vsenv" target="_blank" class="link-item">
+                            <span>🐙</span>
+                            GitHub 仓库
+                        </a>
+                        <a href="https://github.com/dhjs0000/vsenv/issues" target="_blank" class="link-item">
+                            <span>🐛</span>
+                            问题反馈
+                        </a>
+                        <a href="https://dhjs0000.github.io/VSenv/helps.html" target="_blank" class="link-item">
+                            <span>📖</span>
+                            详细文档
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>VSenv</h3>
+                    <p>VS Code 离线实例管理器</p>
+                    <p class="author">作者：戴君豪</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>项目</h4>
+                        <ul>
+                            <li><a href="https://github.com/dhjs0000/vsenv" target="_blank">GitHub</a></li>
+                            <li><a href="https://github.com/dhjs0000/vsenv/releases" target="_blank">下载</a></li>
+                            <li><a href="https://github.com/dhjs0000/vsenv/issues" target="_blank">反馈</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>许可证</h4>
+                        <p>AGPLv3.0</p>
+                        <p>完全免费开源</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 戴君豪 (dhjs0000). 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
